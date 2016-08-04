@@ -1,0 +1,43 @@
+<ion-item>
+	<ion-row>
+		<ion-col width-20>
+
+
+			<div *ngIf="datoNumber==VELOCIDAD">
+				<ion-icon name='trending-up' item-left class="color-iconos"></ion-icon>
+					Velocidad
+			</div>
+			<div *ngIf="datoNumber==ESQUIVAR">
+				<ion-icon name='shuffle' item-left class="color-iconos"></ion-icon>
+					Esquivar
+			</div>
+			<div *ngIf="datoNumber==DISTANCIA">
+				<ion-icon name='map' item-left class="color-iconos"></ion-icon>
+					Distancia
+			</div>
+			<div *ngIf="datoNumber==MANA">
+				<ion-icon name='color-wand' item-left class="color-iconos"></ion-icon>
+					Mana
+			</div>
+			<div *ngIf="datoNumber==RESISTENCIA">
+				<ion-icon name='lock' item-left class="color-iconos"></ion-icon>
+					Resistencia
+			</div>
+			<div *ngIf="datoNumber==ALMA">
+				<ion-icon name='heart' item-left class="color-iconos"></ion-icon>
+					Alma
+			</div>
+			<div *ngIf="datoNumber==SUERTE">
+				<ion-icon name='heart' item-left class="color-iconos"></ion-icon>
+					Suerte
+			</div>
+		</ion-col>
+		<ion-col width-80>
+			<template ngFor #range [ngForOf]="range" #index="index">
+				<ion-icon [name]="index < cantidad ? 'star' : 'star-outline'" class="color-estrella"></ion-icon>
+			</template>
+		</ion-col>
+	</ion-row>
+
+	
+</ion-item>

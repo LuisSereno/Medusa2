@@ -1,0 +1,18 @@
+
+<ion-navbar *navbar>
+  <ion-title>
+    Elige rival
+  </ion-title>
+</ion-navbar>
+
+<ion-content class="page3">
+	  <ion-list>
+	    <ion-item *ngFor="#rival of arrayBusqueda">
+	      <ion-thumbnail item-left>
+	        <img src="img/reloj.png">
+	      </ion-thumbnail>
+	      <h2>{{rival.get("nombre")}}</h2>
+	      <h3>{{rival.get("ultimoCombate")}} - {{rival.get("distancia")}} mts</h3>
+	    </ion-item>
+	  </ion-list>
+</ion-content>
